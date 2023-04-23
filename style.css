@@ -1,0 +1,579 @@
+/*****************************************************
+Author: Artem Olefirenko
+
+*****************************************************/
+
+
+/************** BASIC PROPERTIES ******************/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+.content {
+	padding:8vh 2vw 1vh;
+	max-width: 1100px;
+	margin: 0 auto;
+	background-color: #000000;
+}
+
+h1 {
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 40px;
+	color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 50px;
+		color: #ffffff;
+	}
+}
+
+h2 {
+	text-align: center;
+	font-family:Verdana, Geneva, sans-serif;
+	color: #ffffff;
+}
+
+h3 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 40px;
+}
+
+p {
+	text-align: center;
+	font-family: 'Rajdhani', sans-serif;
+	font-size: 15px;
+	color: #ffffff;
+}
+
+p1 {
+	text-align: center;
+	font-family: 'Rajdhani', sans-serif;
+	font-size: 15px;
+	color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+	p1 {
+		text-align: center;
+		font-family: 'Rajdhani', sans-serif;
+		font-size: 15px;
+		color: #ffffff;
+	}
+}
+
+a:hover {
+	color: #000000;
+}
+
+/********************* NAVIGATION *********************/
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: #ffffff;
+	font-family: "Poppins", sans-serif;
+	z-index: 999;
+}
+
+.nav-logo a {
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+.nav-logo a:hover {
+	color: #1F0411;
+}
+
+.navlist {
+	display: flex;
+	justify-content: space-around;
+	width: 40%;
+}
+
+.navlist li {
+	list-style: none;
+}
+
+.navlist a {
+	color: #000000;
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.navlist a:hover {
+	color: #000000;
+}
+
+.nav_line {
+	display: none;
+}
+
+.nav_line div {
+	width: 25px;
+	height: 3px;
+	background-color: #000000;
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+	.navlist {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+	
+	.navlist {
+		position: fixed; 
+		right: 0px;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in;
+		height: 92vh;
+		top: 8vh;
+		background-color: #ffffff;
+		display: flex;
+	}
+	
+	.nav_line {
+		display: block;
+		cursor: pointer;
+	}
+}
+
+.nav-toggle {
+		transform: translateX(0%);
+}
+
+/****************** ABOUT ME **************************/
+
+
+@media screen and (min-width: 768px) and (min-height: 610px){
+	.about_me_container {
+		padding-bottom: 10vh;
+		height: 100vh;
+	}
+}
+
+#about_me img {
+	border-radius: 50%;
+	border: 5px solid white;
+	width: 100%;
+}
+
+#about_me h3 {
+	font-family: Geneva, sans-serif;
+	font-size: 24px;
+	color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+	.about_me_container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.about_me_item {
+		width:50%;
+		padding: 5%;
+	}
+
+	#about_me {
+		background-color: #000000;
+		background-attachment: fixed;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}	
+
+	#about_me .about_me_item_1 {
+		width: 30%;
+		margin-bottom: -80px;
+		z-index: 666;
+	}
+
+	#about_me .about_me_item_2 {
+		background-color: white;
+		width:60%;
+	}
+}
+
+.contact {
+	padding: 10px;
+}
+
+.contact-item {
+	padding-top: 2px;
+}
+
+.contact-item a {
+	text-decoration: none;
+	color: #000000;
+	font-family: "Poppins", sans-serif;
+	padding-left: 2px;
+}
+
+@media screen and (max-width: 768px) {
+	.contact-item a {
+		text-decoration: none;
+		color: #ffffff;
+		font-family: "Poppins", sans-serif;
+		padding-left: 2px;
+	}
+}
+
+
+.contact-item a:hover {
+	color: black;
+}
+
+.social-media {
+	display: flex;
+	align-items: center;
+}
+
+.social-media a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 33%;
+	text-align: center;
+}
+
+.social-media i {
+	font-size: 30px;
+	color:#000000;
+}
+
+.social-media i:hover {
+	color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+	#about_me img {
+		margin-top: 5%;
+		border: 5px ;
+		border: 10px solid #ffffff;
+	}
+
+	.about_me_item_1 {
+		width: 70%;
+		margin: auto;
+	}
+
+	.social-media i{
+		font-size: 50px;
+		margin: 3%;
+		color: #ffffff;
+	}
+
+	.contact-item i, .contact-item a {
+		font-size: 20px;
+	}
+
+	.contact {
+		padding-bottom: 20px;
+		padding-top: 0;
+	}
+}
+
+/******************** Skills ************************/
+
+@media only screen and (min-width: 768px) and (min-height: 610px){
+	#Skills {
+	height: 100vh;
+	}
+}
+
+#Skills {
+	display: flex;
+	align-items: center;
+	background-color: #000000;
+}
+
+#Skills h2 {
+	font-size: 30px;
+	padding: 20px;
+}
+
+#Skills-p {
+	font-size: 22px;
+	padding: 3%;
+}
+
+
+.skill img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 33%;
+	padding: 5%;
+	border-radius: 27%;
+	background-color: white;
+}
+
+.skill h3 {
+	 text-align: center;
+	 font-size: 24px;
+	 padding-top: 5px;
+	 padding-bottom: 3px;
+	 color: #ffffff;
+}
+
+.skill {
+	display: inline-block;
+	width: 29%;
+	margin-top: 5%;
+	background-color: #000000;
+	border: 1px solid #ffffff;
+	padding: 2%;
+	border-radius: 10%;
+	margin: 1.5%;
+}
+
+.skill p {
+	color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+
+	#Skills h2 {
+	font-size: 25px;
+	padding: 20px;
+	}
+
+	#Skills-p {
+	font-size: 16px;
+	}
+
+	.skill {
+	padding: 8%;
+	display: block;
+	width: 90%;
+	background-color: #000000;
+	border-radius: 10%;
+	margin:5%;
+	}
+}
+
+/******************** Education *********************/
+
+
+@media screen and (min-width: 768px) and (min-height: 610px) {
+	#education {
+	height: 100vh;
+	}
+}
+
+.icon {
+	color: rgb(0, 0, 0);
+  }
+
+  .icon1 {
+	color: rgb(255, 255, 255);
+  }
+
+@media screen and (max-width: 768px) {
+	.icon {
+		color: rgb(255, 255, 255);
+	  }
+	  .icon1 {
+		color: rgb(255, 255, 255);
+	  }
+}
+
+#education {
+	display: flex;
+	align-items: center;
+	background-color: #000000;
+}
+
+#education h2 {
+	font-size: 30px;
+	padding: 20px;
+}
+
+#education h3 {
+	font-family: Geneva, sans-serif;
+	font-size: 24px;
+	color: #ffffff;
+}
+
+#education h4 {
+	font-family: "Poppins", sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+}
+
+.education {
+	margin-bottom: 5%;
+}
+
+.education-item {
+	max-width: 600px;
+	padding: 10px;
+	border-bottom: 2px solid white;
+	display: flex;
+	align-items: center;
+}
+
+.education-item-inner i {
+	font-size: 40px;
+	margin-right: 20px;
+}
+
+.kurzy {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10%;
+	flex-wrap: wrap;
+}
+
+.kurz {
+	margin: 10px;
+	padding: 17px;
+	background-color: white;
+	border-radius: 15px 50px;
+	box-shadow: 5px 10px 8px #888888;
+}
+
+#education .kurz h3 {
+	font-size: 20px;
+}
+
+#education .kurz h4 {
+	font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+	.kurzy {
+		justify-content: space-around;
+	}
+	.kurz {
+		min-width: 260px;
+	}
+}
+
+
+/******************* MY WORKS **********************/
+
+#my_works {
+	display: flex;
+	align-items: center;
+	background-color: #000000;
+  }
+  
+  #my_works h2 {
+	padding: 20px;
+  }
+  
+  #my_works .content {
+	padding-bottom: 30px;
+  }
+  
+  .galerie {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: #000000;
+  }  
+  
+  .galerie input {
+	display: none;
+  }
+  
+  .galerie label {
+	margin: 1%;
+	width: 22%;
+	text-align: center;
+	cursor: pointer;
+	padding: 20px;
+	background-color: #ffffff;
+	font-weight: bold;
+	font-family: "Poppins", sans-serif;
+  }
+  
+  .galerie .tab {
+	order: 1;
+	width: 100%;
+	display: none;
+  }
+  
+  .galerie input:checked + label + .tab {
+	display: block;
+  }
+  
+  .galerie input:checked + label {
+	background: #000000;
+	color: white;
+	border: 1px solid #ffffff;
+  }
+  
+  .container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5px;
+	background-color: #000000;
+  }
+  
+  /* 3 fotky na radku */
+  .item1 {
+    margin: 5px;
+    width: calc(50% - 10px);
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .item1 {
+        width: calc(50% - 10px);
+        height: auto;
+    }
+}
+  
+
+/****************** FOOTER ***********************/
+
+
+footer {
+	background-color: #000000;
+}
+
+footer .content {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+footer span {
+	font-size: 12px;
+	color: #ffffff;
+	font-family: "Poppins", sans-serif;
+	padding-left: 5px;
+}
